@@ -20,14 +20,33 @@ namespace PeopleSearchApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Controller controller;
+
         public MainWindow()
         {
             InitializeComponent();
+            controller = new Controller(this);
+        }
+
+        public void viewDatabase()
+        {
+            searchText.Visibility = Visibility.Hidden;
+            searchButton.Visibility = Visibility.Hidden;
+            searchLabel.Visibility = Visibility.Hidden;
+            dataGrid.Visibility = Visibility.Visible;
+        }
+
+        public void viewSearchForm()
+        {
+            searchText.Visibility = Visibility.Visible;
+            searchButton.Visibility = Visibility.Visible;
+            searchLabel.Visibility = Visibility.Visible;
+            dataGrid.Visibility = Visibility.Hidden;
         }
 
         private void searchButton_Click(object sender, RoutedEventArgs e)
         {
-
+            controller.runSearch(searchText.Text);
         }
     }
 }

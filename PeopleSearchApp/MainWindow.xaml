@@ -7,11 +7,9 @@
         mc:Ignorable="d"
         Title="People Database Search" Height="350" Width="525">
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="497" IsEnabled="False"/>
-
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="497" IsEnabled="True" Visibility="Hidden"/>
         <Label x:Name="searchLabel" Content="Enter search term:" HorizontalAlignment="Left" Margin="100,40,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="0.5,0.5" IsEnabled="True"/>
-        <TextBox x:Name="searchText" HorizontalAlignment="Left" Height="23" Margin="210,43,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="110" IsEnabled="True"/>
+        <TextBox x:Name="searchText" HorizontalAlignment="Left" Height="23" Margin="210,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" IsEnabled="True"/>
         <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" Margin="100,90,0,0" VerticalAlignment="Top" Width="75" IsEnabled="True" Click="searchButton_Click"/>
-
     </Grid>
 </Window>
